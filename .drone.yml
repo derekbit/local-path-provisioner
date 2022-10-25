@@ -30,7 +30,7 @@ steps:
     - "dist/artifacts/*"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -40,13 +40,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_BRANCH}-head-amd64"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - push
 
@@ -56,13 +56,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_TAG}-amd64"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -103,7 +103,7 @@ steps:
     - "dist/artifacts/*"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -113,13 +113,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_BRANCH}-head-arm64"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - push
 
@@ -129,13 +129,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_TAG}-arm64"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -175,7 +175,7 @@ steps:
     - "dist/artifacts/*"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -185,13 +185,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_BRANCH}-head-arm"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - push
 
@@ -201,13 +201,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_TAG}-arm"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -251,7 +251,7 @@ steps:
     - "dist/artifacts/*"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -264,13 +264,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_BRANCH}-head-s390x"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - push
 
@@ -283,13 +283,13 @@ steps:
     dockerfile: package/Dockerfile
     password:
       from_secret: docker_password
-    repo: "rancher/local-path-provisioner"
+    repo: "naturlich/local-path-provisioner"
     tag: "${DRONE_TAG}-s390x"
     username:
       from_secret: docker_username
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
@@ -319,11 +319,11 @@ steps:
       - linux/arm64
       - linux/arm
       - linux/s390x
-    target: "rancher/local-path-provisioner:${DRONE_BRANCH}-head"
-    template: "rancher/local-path-provisioner:${DRONE_BRANCH}-head-ARCH"
+    target: "naturlich/local-path-provisioner:${DRONE_BRANCH}-head"
+    template: "naturlich/local-path-provisioner:${DRONE_BRANCH}-head-ARCH"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - push
 
@@ -339,11 +339,11 @@ steps:
       - linux/arm64
       - linux/arm
       - linux/s390x
-    target: "rancher/local-path-provisioner:${DRONE_TAG}"
-    template: "rancher/local-path-provisioner:${DRONE_TAG}-ARCH"
+    target: "naturlich/local-path-provisioner:${DRONE_TAG}"
+    template: "naturlich/local-path-provisioner:${DRONE_TAG}-ARCH"
   when:
     instance:
-    - drone-publish.rancher.io
+    - 605d-220-135-21-6.jp.ngrok.io
     event:
     - tag
 
